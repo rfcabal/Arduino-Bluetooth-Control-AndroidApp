@@ -1,0 +1,19 @@
+<div class="row">
+  <br>
+  <br>
+  <div class="text-center">
+    <button type="button" class="btn btn-success btn-sm" ng-click="ledon()">LED On</button> - <button type="button" class="btn btn-danger btn-sm" ng-click="ledoff()">LED Off</button>
+  </div>
+  <br>
+  <br>
+  <div class="alert alert-success" role="alert" ng-show="showAlert">You have connected</div>
+  <div class="list-group" ng-show="showList">
+    <button ng-repeat="data in datas" type="button" class="list-group-item" ng-click="connect(data.address)">{{data.name}}</button>
+  </div>
+  <br>
+  <br>
+  <button class="btn btn-block btn-primary buton-sm" ng-click="deviceList()" ng-show="showbutton">Connect Bluetooth</button>
+  <button class="btn btn-block btn-primary buton-sm" ng-click="disconnect()" ng-show="!showbutton">Disconnect Bluetooth</button>
+  <br>
+  <br>
+</div>
